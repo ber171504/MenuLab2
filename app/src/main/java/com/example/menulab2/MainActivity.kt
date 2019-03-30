@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import java.util.ArrayList
+import java.util.logging.Logger.global
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         val eliminate = findViewById<Button>(R.id.Eliminate)
-        val lapHistory = ArrayList<Int>()
+        val lapHistory: ArrayList<Int> = ArrayList<Int>()
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, lapHistory)
         listView.setAdapter(adapter);

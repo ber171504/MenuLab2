@@ -67,7 +67,9 @@ class Main2Activity : AppCompatActivity() {
         }
         val crear = findViewById<Button>(R.id.create)
         crear.setOnClickListener{
-            //agregar cosas a laps
+            lapHistory.add(counter)
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 }
 }
